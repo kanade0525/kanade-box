@@ -23,6 +23,24 @@
   <!-- Custom styles for this template -->
   <link href="css/agency.css" rel="stylesheet">
 
+  <!-- jsの処理用 -->
+  <style>
+    #btn {
+      transition: 0.5s;
+    }
+    .spinBtn {
+      transform: rotate(720deg);
+    }
+
+    #aboutItem {
+      transition: 0.8s;
+      cursor: pointer;
+    }
+    .zoom {
+      transform: scale(2.5);
+    }
+
+  </style>
 </head>
 
 <body id="page-top">
@@ -60,7 +78,14 @@
       <div class="intro-text">
         <div class="intro-lead-in">Welcome To My portfolio!</div>
         <div class="intro-heading text-uppercase">Kanade Ishida</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">More</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="btn" href="#about">More</a>
+        <script>
+          'use strict';
+          const btn = document.getElementById('btn');
+          btn.addEventListener('click', () => {
+            btn.classList.toggle('spinBtn');
+          });
+        </script>
       </div>
     </div>
   </header>
@@ -75,7 +100,7 @@
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-4" id="aboutItem">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-university fa-stack-1x fa-inverse"></i>
@@ -83,7 +108,7 @@
           <h4 class="service-heading">外国語・英語英米文化専攻</h4>
           <p class="text-muted">麗澤大学外国語学部外国語学科英語英米文化専攻。中学高校教諭一種免許（英語）の取得を目指し、教職課程履修中。</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="aboutItem">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
@@ -91,7 +116,7 @@
           <h4 class="service-heading">プログラミング学習</h4>
           <p class="text-muted">2019年4月の休学と同時にプログラミング学習を開始。現在は友人にバックエンドを担当してもらいながら、HTML/CSS(Haml/Scss)でデザイン部分を担当。</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="aboutItem">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
@@ -99,7 +124,7 @@
           <h4 class="service-heading">ゲーム</h4>
           <p class="text-muted">ゲームが趣味でアクション・シューティング・RPGなど。時間が許すなら1日12時間以上やっていられる。</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="aboutItem">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-guitar fa-stack-1x fa-inverse"></i>
@@ -107,7 +132,7 @@
           <h4 class="service-heading">音楽</h4>
           <p class="text-muted">音楽鑑賞・演奏共に趣味。Jazz,Rock,吹奏楽曲etc... 楽器はギター、ベースなど。 </p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="aboutItem">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
@@ -115,7 +140,7 @@
           <h4 class="service-heading">ベビー・キッズ用品販売</h4>
           <p class="text-muted">ベビー・キッズ用品を仕入れてメルカリで販売しています。</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" id="aboutItem">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-donate fa-stack-1x fa-inverse"></i>
@@ -123,6 +148,15 @@
           <h4 class="service-heading">投資信託・国債</h4>
           <p class="text-muted">貯金の代わりとして、ローリスクローリターンをモットーに細々と積み立てています。</p>
         </div>
+        <!-- <script>
+          'use strict';
+          const aboutItem = document.getElementById('aboutItem');
+          aboutItem.addEventListener('click', () => {
+            aboutItem.classList.toggle('zoom');
+
+            document.div.appendChild();
+          });
+        </script> -->
       </div>
     </div>
   </section>
