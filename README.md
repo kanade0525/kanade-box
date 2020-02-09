@@ -1,2 +1,3 @@
-# kanade-box
-I don't decide how to use it.
+# My portofolio page
+
+## This is my practice for bootstrap and JS.
